@@ -168,7 +168,8 @@ class Cling(object):
                        ('Last-Modified', last_modified),
                        ('ETag', etag),
                        ('AllowedOrigin', '*'),
-                       ('AllowedMethod', 'GET')]
+                       ('AllowedMethod', 'GET'),
+                       ('AllowedHeader', '*')]
             if content_encoding == 'gzip':
                 headers.append(('Content-Encoding', 'gzip'))
             if_modified = environ.get('HTTP_IF_MODIFIED_SINCE')
